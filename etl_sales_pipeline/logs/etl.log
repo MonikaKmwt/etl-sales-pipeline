@@ -1,0 +1,29 @@
+2026-01-17 15:45:20 [INFO] ETL Pipeline started
+2026-01-17 15:45:20 [INFO] Extracting CSV from data/Online_Retail.csv
+2026-01-17 15:45:21 [INFO] Extracted 541909 rows and 8 columns.
+2026-01-17 15:45:21 [INFO] Starting data transformation
+2026-01-17 15:45:21 [INFO] Transformation complete. 524878 rows remain.
+2026-01-17 15:45:21 [INFO] Running data validation checks
+2026-01-17 15:45:21 [INFO] Validation passed successfully!
+2026-01-17 15:45:21 [INFO] Connecting to DB: postgresql+psycopg2://postgres:Your_Password@localhost:5432/etl_sales_db
+2026-01-17 15:45:27 [ERROR] Error loading data: (psycopg2.errors.DatatypeMismatch) column "return_flag" is of type boolean but expression is of type integer
+LINE 1: ....55, 17850, 'United Kingdom', 15.299999999999999, 0), ('5363...
+                                                             ^
+
+
+[SQL: INSERT INTO sales_transactions (invoiceno, stockcode, description, quantity, invoicedate, unitprice, customerid, country, total_price, return_flag) VALUES (%(invoiceno__0)s, %(stockcode__0)s, %(description__0)s, %(quantity__0)s, %(invoicedate__0)s, % ... 206703 characters truncated ... unitprice__999)s, %(customerid__999)s, %(country__999)s, %(total_price__999)s, %(return_flag__999)s)]
+[parameters: {'country__0': 'United Kingdom', 'description__0': 'WHITE HANGING HEART T-LIGHT HOLDER', 'total_price__0': 15.299999999999999, 'unitprice__0': 2.55, 'quantity__0': 6, 'stockcode__0': '85123A', 'return_flag__0': 0, 'customerid__0': 17850, 'invoicedate__0': None, 'invoiceno__0': '536365', 'country__1': 'United Kingdom', 'description__1': 'WHITE METAL LANTERN', 'total_price__1': 20.34, 'unitprice__1': 3.39, 'quantity__1': 6, 'stockcode__1': '71053', 'return_flag__1': 0, 'customerid__1': 17850, 'invoicedate__1': None, 'invoiceno__1': '536365', 'country__2': 'United Kingdom', 'description__2': 'CREAM CUPID HEARTS COAT HANGER', 'total_price__2': 22.0, 'unitprice__2': 2.75, 'quantity__2': 8, 'stockcode__2': '84406B', 'return_flag__2': 0, 'customerid__2': 17850, 'invoicedate__2': None, 'invoiceno__2': '536365', 'country__3': 'United Kingdom', 'description__3': 'KNITTED UNION FLAG HOT WATER BOTTLE', 'total_price__3': 20.34, 'unitprice__3': 3.39, 'quantity__3': 6, 'stockcode__3': '84029G', 'return_flag__3': 0, 'customerid__3': 17850, 'invoicedate__3': None, 'invoiceno__3': '536365', 'country__4': 'United Kingdom', 'description__4': 'RED WOOLLY HOTTIE WHITE HEART.', 'total_price__4': 20.34, 'unitprice__4': 3.39, 'quantity__4': 6, 'stockcode__4': '84029E', 'return_flag__4': 0, 'customerid__4': 17850, 'invoicedate__4': None, 'invoiceno__4': '536365' ... 9900 parameters truncated ... 'country__995': 'United Kingdom', 'description__995': 'HAND WARMER RED RETROSPOT', 'total_price__995': 4.2, 'unitprice__995': 2.1, 'quantity__995': 2, 'stockcode__995': '22632', 'return_flag__995': 0, 'customerid__995': 15012, 'invoicedate__995': None, 'invoiceno__995': '536522', 'country__996': 'United Kingdom', 'description__996': 'SWEETHEART CAKESTAND 3 TIER', 'total_price__996': 9.95, 'unitprice__996': 9.95, 'quantity__996': 1, 'stockcode__996': '22776', 'return_flag__996': 0, 'customerid__996': 15012, 'invoicedate__996': None, 'invoiceno__996': '536522', 'country__997': 'United Kingdom', 'description__997': 'STAR DECORATION PAINTED ZINC ', 'total_price__997': 1.3, 'unitprice__997': 0.65, 'quantity__997': 2, 'stockcode__997': '22338', 'return_flag__997': 0, 'customerid__997': 15012, 'invoicedate__997': None, 'invoiceno__997': '536522', 'country__998': 'United Kingdom', 'description__998': 'CHRISTMAS HANGING STAR WITH BELL', 'total_price__998': 2.5, 'unitprice__998': 1.25, 'quantity__998': 2, 'stockcode__998': '21810', 'return_flag__998': 0, 'customerid__998': 15012, 'invoicedate__998': None, 'invoiceno__998': '536522', 'country__999': 'United Kingdom', 'description__999': 'SILK PURSE BABUSHKA PINK', 'total_price__999': 3.35, 'unitprice__999': 3.35, 'quantity__999': 1, 'stockcode__999': '22449', 'return_flag__999': 0, 'customerid__999': 15012, 'invoicedate__999': None, 'invoiceno__999': '536522'}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-01-17 15:45:27 [INFO] ETL Pipeline completed successfully.
+2026-01-17 15:45:27 [INFO] Pipeline runtime: 0:00:07.422374
+2026-01-17 15:48:25 [INFO] ETL Pipeline started
+2026-01-17 15:48:25 [INFO] Extracting CSV from data/Online_Retail.csv
+2026-01-17 15:48:26 [INFO] Extracted 541909 rows and 8 columns.
+2026-01-17 15:48:26 [INFO] Starting data transformation
+2026-01-17 15:48:26 [INFO] Transformation complete. 524878 rows remain.
+2026-01-17 15:48:26 [INFO] Running data validation checks
+2026-01-17 15:48:26 [INFO] Validation passed successfully!
+2026-01-17 15:48:26 [INFO] Connecting to DB: postgresql+psycopg2://postgres:Your_Password@localhost:5432/etl_sales_db
+2026-01-17 15:49:08 [INFO] \u2705 Inserted 524878 rows into sales_transactions
+2026-01-17 15:49:08 [INFO] ETL Pipeline completed successfully.
+2026-01-17 15:49:08 [INFO] Pipeline runtime: 0:00:43.439637
